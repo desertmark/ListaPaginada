@@ -8,18 +8,17 @@ Using ListaPaginada
 
 then in your code supose you have a list of MyClass Objects
 
-var page = 1;
-var pageSize = 3;
-var source = new List<MyClass>()
-{
-  //Some objects
-};
-
-var lista = source.ToListaPaginada<MyClass>(pageSize,page);
+            var page = 1;
+            var pageSize = 3;
+            var source = new List<MyClass>()
+            {
+              //Some objects
+            };
+            var lista = source.ToListaPaginada<MyClass>(pageSize,page);
 
 Or
 
-var lista = new ListaPaginada<MyClass>(pageSize,page,source);
+            var lista = new ListaPaginada<MyClass>(pageSize,page,source);
 
 Then
 
@@ -30,3 +29,4 @@ Then
             Console.WriteLine(lista.TotalItem);       //source.Count();
             Console.WriteLine(lista.PaginaActual);    //1
             Console.WriteLine(lista.TotalDePaginas);  //it will depend on how many items source has.
+
